@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+</head>
+<body>
+<p>列表</p>
+ <table class="table table-bordered">
+    <tr>
+        <th>用户ID</th>
+        <th>邮箱</th>
+    </tr>
+     {% for info in users %}
+         <tr>
+                <td>{{ info.name }}</td>
+                <td>{{ info.email }}</td>
+         </tr>
+     {% endfor %}
+</table>
+</body>
+</html>

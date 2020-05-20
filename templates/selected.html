@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selected Courses</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/selected.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/css/selected.css">
+
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="{{ url_for('static', filename='js/selected.js') }}"></script>
+    <script src="../static/js/selected.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('selected',username=session.get('name')) }}" id="user">{{ user_name }}</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                <li><a href="{{ url_for('election',username=session.get('name')) }}">Election</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Selected course</h1>
+        <table class="table">
+            <tr>
+                <th>Course</th>
+                <th>Teacher</th>
+                <th>CourseID</th>
+                <th>Class</th>
+                <th>type</th>
+            </tr>
+        </table>
+    </div>
+</body>
+    <script>
+        var courses=new Array();
+        var c1= new course(1,"Fucke","xx","yy",true);
+        courses.push(c1);
+        $(document).ready(function () {
+//            print_course_list(courses);
+            $.getJSON('/get_selected',function (data) {
+               print_course_list(data);
+            });
+        });
+    </script>
+</html>

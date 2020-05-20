@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除</title>
+    <style type="text/css">
+         tbody{
+            font-size:25px;
+            color:grey;
+            background:EBD3E8;
+            height:50px;
+            width:500px;
+         }
+    </style>
+</head>
+
+<body bgcolor="FFDCB9">
+<form action="{{url_for('delstu')}}" method="post">
+    <table>
+        <tbody>
+            <tr>
+                <td>请输入要删除的学号:</td>
+                <td><input type="text" placehoder="请输入要删除的学号" name="delnumber">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="确定"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>
+<a href="/studentlist">跳转到首页</a>
+</p>
+</body>
+</html>

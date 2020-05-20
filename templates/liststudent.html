@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+</head>
+<body>
+
+<table border="2">
+        <tbody>
+            <tr>
+                <td><a href="{{url_for('delstu')}}">删除学生信息</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{url_for('addstu')}}">增加学生信息</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{url_for('altstu')}}">修改学生信息</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{url_for('searchstu')}}">查找学生信息</a></td>
+            </tr>
+        </tbody>
+</table>
+
+
+<p>明细列表</p>
+ <table border = "1">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>学院</th>
+    </tr>
+     {% for info in stu %}
+         <tr>
+                <td>{{ info.num }}</td>
+                <td>{{ info.name }}</td>
+                <td>{{ info.school }}</td>
+         </tr>
+     {% endfor %}
+</table>
+<p>
+<a href="/election">选课</a>
+</p>
+</body>
+</html>

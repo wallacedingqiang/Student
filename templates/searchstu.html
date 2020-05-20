@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找</title>
+     <style type="text/css">
+         tbody{
+            font-size:25px;
+            color:grey;
+            background:EBD3E8;
+            height:50px;
+            width:500px;
+         }
+    </style>
+</head>
+<body bgcolor="FFDCB9">
+<form action="{{url_for('searchstu')}}" method="post">
+    <table>
+        <tbody>
+            <tr>
+                <td>学号:</td>
+                <td><input type="text" placehoder="请输入学号" name="number">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="确定"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<br/>
+
+<p>列表</p>
+ <table border="2">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>学院</th>
+    </tr>
+   {%if find%}
+       您查找的学生信息为：{{find}}
+    <tr>
+        <td>{{ find.num }}</td>
+        <td>{{ find.name }}</td>
+        <td>{{ find.school }}</td>
+    </tr>
+   <br/>
+   <br/>
+   <br/>
+       您查找的学生信息为：{{find}}
+     {%endif%}
+</table>
+
+<br/>
+<br/>
+<br/>
+<p>
+<a href="/studentlist">跳转到首页</a>
+</p>
+</body>
+</html>

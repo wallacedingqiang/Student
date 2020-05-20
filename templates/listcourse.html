@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程信息</title>
+</head>
+<body>
+<p>明细列表</p>
+ <table border = "1">
+    <tr>
+        <th>课程名称</th>
+        <th>课程老师</th>
+        <th>教室号</th>
+    </tr>
+     {% for info in cou %}
+         <tr>
+                <td>{{ info.name }}</td>
+                <td>{{ info.teacher }}</td>
+                <td>{{ info.class_room }}</td>
+         </tr>
+     {% endfor %}
+</table>
+<p>
+<a href="/studentlist">首页</a>
+</p>
+</body>
+</html>

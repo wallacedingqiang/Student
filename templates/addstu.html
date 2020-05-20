@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <style type="text/css">
+         tbody{
+            font-size:25px;
+            color:grey;
+            background:EBD3E8;
+            height:50px;
+            width:500px;
+         }哦
+    </style>
+</head>
+<body bgcolor="FFDCB9">
+<form action="{{url_for('addstu')}}" method="post">
+    <table >
+        <tbody>
+            <tr>
+                <td>学号:</td>
+                <td><input type="text" placehoder="请输入学号" name="addnumber">
+                </td>
+            </tr>
+            <tr>
+                <td>姓名:</td>
+                <td><input type="text" placehoder="请输入姓名" name="addname">
+                </td>
+            </tr>
+            <tr>
+                <td>院系:</td>
+                <td><input type="text" placehoder="请输入院系" name="adddepartment">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="确定"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<br/>
+<p>
+<a href="/studentlist">跳转到首页</a>
+</p>
+</body>
+</html>

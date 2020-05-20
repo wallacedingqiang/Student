@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选课</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/election1.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/css/election1.css">
+
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="{{ url_for('static', filename='js/election9.js') }}"></script>
+    <script src="../static/js/election9.js"></script>
+
+</head>
+<body>
+    <div id="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li><a href="#" id="optional">课程</a></li>
+                </ul>
+            </div>
+        <div class="col-sm-9 col-md-offset-3 col-md-10">
+            <h1>课程名称</h1>
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>课程</th>
+                    <th>教师</th>
+                    <th>课程ID</th>
+                    <th>教师</th>
+                </tr>
+            </table>
+        </div>
+        <button type="button" id="confirm" class="btn btn-primary">确认选课</button>
+    </div>
+
+</body>
+    <script>
+        var checked_course = new Array();
+//        var course_json;
+        $(document).ready(function () {
+           $("#optional").click(function () {
+              $.getJSON('/optioanl',function (data) {
+                  print_course_list(data);
+              });
+           });
+           $("#confirm").click(function () {
+               var course_json=JSON.stringify(checked_course);
+               $.post("/confirm",{"courses":course_json},function (data,status) {
+                   if(status=="success"){
+                       alert("选课成功！");
+                       window.location.reload();
+                   }
+               });
+           });
+
+        });
+    </script>
+</html>

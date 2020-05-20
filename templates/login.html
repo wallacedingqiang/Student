@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>选课系统</h2>
+        <form action="login" method="post">
+            <div class="form-group">
+                <label>用户:</label>
+                <input type="text" class="form-control" name="user"/>
+            </div>
+            <div class="form-group">
+                <label>密码:</label>
+                <input type="password" class="form-control" name="pwd"/>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"/>记住
+                </label>
+                <label>
+                    <a>忘记密码？</a>
+                </label>
+            </div>
+            <button type="button" class="btn btn-default" id="Reg_btn"><a>注册</a></button>
+            <button type="submit" class="btn btn-default" id="Login_btn">登录</button>
+        </form>
+    </div>
+</body>
+</html>

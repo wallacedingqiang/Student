@@ -1,0 +1,17 @@
+PySnooper-0.3.0.dist-info/AUTHORS,sha256=nhPIwIkaQc_hJtH_WWly1SevD_nVgoOHnhYaVEgauqk,326
+PySnooper-0.3.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+PySnooper-0.3.0.dist-info/LICENSE,sha256=cGjOjaHV4R7DJi00DaYaLHRbf0abp-hatQ3eUoE41Zs,1106
+PySnooper-0.3.0.dist-info/METADATA,sha256=IxaZQvfyotPbd2gbeDLRGhW_tNihjJm93FbzSNyhHek,8530
+PySnooper-0.3.0.dist-info/RECORD,,
+PySnooper-0.3.0.dist-info/WHEEL,sha256=05Ahrak1u2K61DpLp9CDNSbUImLTITCMom_cqTFk6pE,116
+PySnooper-0.3.0.dist-info/top_level.txt,sha256=FSDQVJ8ETZs3IAz1qj6BZasYgd8_zSTx5ZCp8wj_5v4,10
+pysnooper/__init__.py,sha256=VcsWxmVL1Rv1fXO5lsO4N9DRM7vt11p7OXUkD8Ps7Uc,842
+pysnooper/__pycache__/__init__.cpython-36.pyc,,
+pysnooper/__pycache__/pycompat.cpython-36.pyc,,
+pysnooper/__pycache__/tracer.cpython-36.pyc,,
+pysnooper/__pycache__/utils.cpython-36.pyc,,
+pysnooper/__pycache__/variables.cpython-36.pyc,,
+pysnooper/pycompat.py,sha256=ehsCfjsLdwoK0_o5fwYWDo3WeqCVfHW5lxekrEZxq4Y,2243
+pysnooper/tracer.py,sha256=EwFTfsq-_mLrIdrUX8A62_Q5L3-ZQkrPX1X-bmWWBao,18320
+pysnooper/utils.py,sha256=j2_8QFpuAenmIa4-WRQ5AGttkHKZLbxIn1KvIbDqrus,2383
+pysnooper/variables.py,sha256=_RLPqXKSVRPmsvUgLYxBMXeImLsJfTOukjRHLbyV1i0,3789
