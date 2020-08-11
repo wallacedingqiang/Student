@@ -6,7 +6,7 @@ from flask import Flask, request, url_for, render_template, redirect
 
 app = Flask(__name__)  # 创建一个Flask app对象
 # 数据库链接的配置，此项必须，格式为（数据库+驱动://用户名:密码@数据库主机地址:端口/数据库名称）
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:d123456@106.15.237.25:3306/test?charset=UTF8MB4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@119.45.202.96:3306/test?charset=UTF8MB4'
 # 跟踪对象的修改，在本例中用不到调高运行效率，所以设置为False
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app=app)  # 为哪个Flask app对象创建SQLAlchemy对象，赋值为db
